@@ -1,4 +1,4 @@
-package com.joel.joel.entities;
+package com.joel.java.entities;
 
 import java.io.Serializable;
 import java.util.Objects;

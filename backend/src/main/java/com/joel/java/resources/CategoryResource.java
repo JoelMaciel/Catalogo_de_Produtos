@@ -1,4 +1,4 @@
-package com.joel.joel.resources;
+package com.joel.java.resources;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.joel.joel.dto.CategoryDTO;
-import com.joel.joel.service.CategoryService;
+import com.joel.java.dto.CategoryDTO;
+import com.joel.java.service.CategoryService;
 
 @RestController
 @RequestMapping(value= "/categories")

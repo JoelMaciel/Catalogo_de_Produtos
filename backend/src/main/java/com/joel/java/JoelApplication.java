@@ -1,4 +1,4 @@
-package com.joel.joel;
+package com.joel.java;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

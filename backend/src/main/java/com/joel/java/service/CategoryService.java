@@ -1,5 +1,5 @@
 
-package com.joel.joel.service;
+package com.joel.java.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,9 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.joel.joel.dto.CategoryDTO;
-import com.joel.joel.entities.Category;
-import com.joel.joel.repositories.CategoryRepository;
+import com.joel.java.dto.CategoryDTO;
+import com.joel.java.entities.Category;
+import com.joel.java.repositories.CategoryRepository;
+import com.joel.java.service.exceptios.EntityNotFoundException;
 
 @Service
 public class CategoryService {
@@ -30,7 +31,7 @@ public class CategoryService {
 	@Transactional(readOnly = true)
 	public CategoryDTO findById(Long id) {
 		Optional<Category> obj = repository.findById(id);
-		Category entity = obj.get();
+		Category entity = obj.orElseThrow(() -> new EntityNotFoundException("Entity not found."));
 		return new CategoryDTO(entity);
 	}
 

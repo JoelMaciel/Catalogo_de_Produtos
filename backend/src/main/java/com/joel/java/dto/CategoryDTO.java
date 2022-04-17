@@ -1,8 +1,8 @@
-package com.joel.joel.dto;
+package com.joel.java.dto;
 
 import java.io.Serializable;
 
-import com.joel.joel.entities.Category;
+import com.joel.java.entities.Category;
 
 public class CategoryDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
