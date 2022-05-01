@@ -43,6 +43,17 @@ public class Product implements Serializable {
 	public Product() {
 
 	}
+	
+
+	public Product(Long id, String name, String description, Double price, String imgUrl, Instant date) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.imgUrl = imgUrl;
+		this.date = date;
+	}
+
 
 	public Long getId() {
 		return id;
@@ -109,7 +120,7 @@ public class Product implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Product other = (Product) obj;
+		Product other = (Product) obj;   
 		return Objects.equals(id, other.id);
 	}
 
